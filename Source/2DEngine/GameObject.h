@@ -1,23 +1,25 @@
 #pragma once
-#include "Game.h"
-#include <cmath>
+#include "GameEngine.h"
 
 class GameObject
 {
 public:
-	GameObject(const char* texturePath, SDL_Renderer* ren, int x, int y);
+	GameObject(const char* texturePath, int x, int y);
 	~GameObject();
 
-	void Update();
+	virtual void Update();
 	void Render();
 
-private:
-	float xPos;
-	float yPos;
+	void SetPosition(float xPos, float yPos);
 
-	SDL_Texture* texture;
+protected:
+	float X;
+	float Y;
+
 	SDL_Rect srcRect, destRect;
-	SDL_Renderer* renderer;
+
+private:
+	SDL_Texture* texture;
 
 };
 

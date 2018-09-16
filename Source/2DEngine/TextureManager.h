@@ -1,10 +1,10 @@
 #pragma once
 
-#include  "Game.h"
+#include  "GameEngine.h"
 
 class TextureManager
 {
 public:
-	static  SDL_Texture* LoadTexture(const char* filename, SDL_Renderer* renderer);
+	static  SDL_Texture* LoadTexture(const char* filename);
 };
 
