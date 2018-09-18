@@ -9,3 +9,8 @@ SDL_Texture* TextureManager::LoadTexture(const char* filePath)
 
 	return tex;
 }
+
+void TextureManager::RenderTexture(SDL_Texture * texture, SDL_Rect src, SDL_Rect dest)
+{
+	SDL_RenderCopy(GameEngine::renderer, texture, &src, &dest);
+}

@@ -21,7 +21,7 @@ void GameObject::Update()
 
 void GameObject::Render()
 {
-	SDL_RenderCopy(GameEngine::renderer, texture, &srcRect, &destRect);
+	TextureManager::RenderTexture(texture, srcRect, destRect);
 }
 
 void GameObject::SetPosition(float x, float y)

@@ -1,9 +1,11 @@
 #include "stdafx.h"
 #include "GameEngine.h"
 #include "Player.h"
+#include "Map.h"
 
 GameObject* player;
 GameObject* enemy;
+Map* map;
 
 SDL_Renderer* GameEngine::renderer = nullptr;
 
@@ -30,6 +32,7 @@ GameEngine::GameEngine(const char* title, int xPos, int yPos, int width, int hei
 
 	player = new Player("Assets/Images/Player.png", 0,0);
 	enemy = new Player("Assets/Images/Player.png", 100, 100);
+	map = new Map();
 	time = Time();
 }
 
@@ -54,6 +57,7 @@ void GameEngine::Render()
 {
 	SDL_RenderClear(renderer);
 
+	map->RenderMap();
 	player->Render();
 	enemy->Render();
 	
