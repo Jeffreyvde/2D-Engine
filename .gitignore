@@ -1,7 +1,3 @@
-#Library
-[Ll]ibrary/
-
-
 # User-specific files
 *.suo
 *.user
@@ -330,3 +326,7 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+#Library
+Library/
+
